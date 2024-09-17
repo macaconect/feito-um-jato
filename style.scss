@@ -1,0 +1,611 @@
+$font-titulus: "Bebas Neue", sans-serif;
+$font-texto: "Poppins", sans-serif;
+$cor-de-fundo-caixas: #F8F5F2;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+//@mixin permite que você faça grupos de declarações css
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin estilo-button {
+    background-color: #fcaf17;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+
+    background-image: url(./img/f190a996f135cfb988f398420257e097.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+
+
+    @media (max-width: 650px) {
+
+        padding: 0 1%;
+
+
+
+    }
+
+
+}
+
+
+header {
+    //para usar o @mixin, vamos chamar o include
+    @include flexbox();
+    height: 10vh; //vh ->height 
+
+    top: 0;
+    width: 100%;
+    padding: 0% 15%;
+    background-color: black;
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        background-color: rgba(9, 0, 0, .8);
+
+
+
+
+    }
+
+
+    img {
+        width: 20%;
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+            width: 60vw;
+            margin-top: 5%;
+
+
+        }
+    }
+
+
+    nav {
+
+        @media (max-width: 650px) {
+            width: 100%;
+            margin-top: 5%;
+
+            @media (min-width:300px) and (max-width: 350px) {
+                width: 80vw;
+
+            }
+
+
+        }
+
+        ul {
+            @include flexbox();
+            justify-content: space-around;
+            width: 40vw;
+
+
+            li {
+                cursor: pointer;
+            }
+
+            list-style: none;
+            font-family: $font-texto;
+            color: #F8F5F2;
+            font-weight: 600;
+
+
+            @media (max-width: 650px) {
+                justify-content: space-between;
+                width: 95%;
+
+
+
+            }
+
+            @media (min-width:300px) and (max-width: 350px) {
+                font-size: 14px;
+
+
+            }
+
+
+        }
+    }
+
+    button {
+        @include estilo-button();
+        font-family: $font-texto;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+
+
+
+
+
+        @media (max-width: 650px) {
+            margin-top: 5%;
+            width: 25vw;
+            font-size: 5vw;
+            font-size: 1rem;
+
+
+
+
+        }
+    }
+}
+
+
+.primeirasessao {
+    @include flexbox();
+    align-items: center;
+    background-color: rgba(9, 0, 0, .8);
+    padding: 2% 10%;
+
+    :hover {
+        opacity: 0.9;
+        transition: all 0.7s;
+
+    }
+
+
+
+
+
+
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+
+
+
+    }
+
+
+}
+
+.div-1 {
+
+    @include flexbox();
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    @media (max-width: 650px) {
+
+        padding: 15% 0;
+    }
+
+}
+
+
+
+h1 {
+    font-family: $font-titulus;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffc248;
+
+
+    @media (max-width: 650px) {
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.5rem;
+
+    }
+
+}
+
+p {
+    text-align: center;
+    font-family: $font-texto;
+    font-size: 1.2rem;
+    padding: 15px;
+    color: #F8F5F2;
+
+    @media (max-width: 650px) {
+        font-size: 0.9rem;
+
+    }
+
+
+}
+
+button {
+    @include estilo-button();
+    font-family: $font-texto;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+
+
+    @media (max-width: 650px) {
+        margin-top: 5%;
+        width: 30vw;
+        font-size: 5vw;
+
+    }
+
+}
+
+
+
+
+
+.ericara-1 {
+    width: 50%;
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+
+
+}
+
+.ericara-2 {
+    display: none;
+
+    @media (max-width: 650px) {
+        display: block;
+        width: 90vw;
+    }
+}
+
+
+
+
+
+
+.segundasessao {
+    @include flexbox();
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgba(60, 50, 90, 0.8);
+
+    :hover {
+        opacity: 0.9;
+        transition: all 0.6s;
+
+    }
+
+    @media (max-width: 650px) {
+        flex-direction: column-reverse;
+
+    }
+
+
+}
+
+.img-2 {
+    width: 30%;
+
+
+
+    @media (max-width: 650px) {
+        width: 90vw;
+        margin-top: 5%;
+        width: 95%;
+        padding-bottom: 5%;
+    }
+
+
+}
+
+
+.div-2 {
+
+    @include flexbox();
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+
+
+
+    @media (max-width: 650px) {
+        width: 100%;
+
+    }
+
+
+
+    p {
+        font-family: $font-texto;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #F8F5F2;
+        width: 95%;
+
+        @media (max-width: 650px) {
+            width: 95%;
+
+        }
+
+
+
+        @media (max-width: 650px) {
+            font-size: 0.9rem;
+            margin-top: 2%;
+            padding: 2% 0;
+
+
+
+        }
+
+    }
+
+    .sobre-nos {
+        font-size: 2rem;
+        font-family: $font-titulus;
+        font-weight: 400;
+        color: #F8F5F2;
+
+    }
+
+    h2 {
+        font-family: $font-titulus;
+        font-size: 3rem;
+        font-weight: 400;
+        color: #ffc248;
+
+
+
+    }
+
+}
+
+
+
+.divh2 {
+    background-color: rgba(9, 0, 0, .7);
+
+
+
+
+
+
+
+    .Membros {
+        text-align: center;
+        font-family: $font-titulus;
+        font-size: 4rem;
+        font-weight: 400;
+        color: #fcaf17;
+        text-shadow: 4px 3px 4px rgb(0, 0, 0);
+        padding-top: 2%;
+
+
+        @media (max-width: 650px) {
+            font-size: 3rem;
+            padding-top: 5%;
+
+        }
+
+
+
+
+
+    }
+}
+
+
+
+
+
+
+.lista-membros {
+    @include flexbox();
+
+    :hover {
+        opacity: 0.9;
+        transition: all 0.9s;
+    }
+
+
+
+
+
+    @media (max-width: 650px) {
+
+        flex-direction: column;
+
+
+    }
+
+
+
+
+}
+
+.divmembros {
+    display: flex;
+    flex-direction: column;
+    color: #F8F5F2;
+    font-weight: 400;
+    align-items: center;
+    background-color: rgba(9, 0, 0, .7);
+    padding-top: 3%;
+    width: 100%;
+
+
+
+
+    @media (max-width: 650px) {
+        padding-top: 10%;
+    }
+
+
+
+
+
+
+    h3 {
+        font-family: $font-titulus;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fcaf17;
+
+        @media (max-width: 650px) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-family: $font-texto;
+        font-size: 20px;
+        font-weight: 400;
+        width: 80%;
+    }
+
+    .valor {
+        font-family: $font-titulus;
+        font-size: 32px;
+        font-weight: 400;
+        color: #ff0000;
+    }
+
+    img {
+
+        width: 40%;
+
+
+    }
+}
+
+footer {
+    background-color: rgba(9, 0, 0, .7);
+    display: flex;
+    justify-content: space-between;
+    font-family: "Ubuntu", sans-serif;
+    margin-top: 2%;
+    
+ 
+    
+
+    :hover {
+        opacity: 0.7;
+        transition: all 0.9s;
+
+
+    }
+
+
+
+    p {
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: rgb(197, 197, 197);
+
+        @media (max-width: 650px) {
+
+
+
+
+            font-size: 1rem;
+
+
+        }
+    }
+
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2%;
+        margin-right: 2%;
+
+
+
+
+        @media (max-width: 650px) {
+            padding-left: 10%;
+
+            margin-left: 1%;
+            margin-right: 1%;
+
+
+        }
+
+
+
+
+
+
+        img {
+            width: 4vw;
+
+            @media (max-width: 650px) {
+                width: 15vw;
+
+            }
+
+
+        }
+
+
+
+
+    }
+
+    .patrocinio {
+
+    
+
+        .txt {
+            color: #F8F5F2;
+            font-weight: 500;
+            font-size: 1rem;
+           
+
+
+            @media (max-width: 650px) {
+                font-size: 0.8rem;
+
+            }
+        }
+
+
+
+    }
+
+    @media (max-width: 650px) {
+        overflow-x: auto;
+
+
+
+
+
+
+
+    }
+
+
+
+}
